@@ -1,20 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="m-0 p-0 box-border">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auth</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <title>Register</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss"></style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-  <div class="SingUp">
-      <div class="register">
+
+<body class="h-screen w-screen">
+  <div class="container flex w-full h-full">
+    <div class="left w-4xl h-full flex justify-center items-center">
+
+      <div class="w-[404px] h-auto">
+
+        <h1 class="text-4xl mb-[58px]">Get Started Now</h1>
+        <form id="registerForm">
+          <div class="flex flex-col">
+
+            <label for="name" class="font-semibold text-xl">Name</label>
+            <input id="name" class="mb-5 border rounded-2 p-[10px] rounded-lg" placeholder="Enter your name..."
+              type="text" name="name" value="">
+
+          </div>
+
+          <div class="flex flex-col">
+            <label for="email" class="font-semibold text-xl">Email address</label>
+            <input id="email" class="border mb-5 rounded-2 p-[10px] rounded-lg" placeholder="Enter your email..."
+              type="email" name="email" value="">
+          </div>
+
+          <div class="flex flex-col">
+            <label class="font-semibold text-xl" for="password">Password</label>
+            <input id="password" type="password" name="password"
+              class="rounded-lg border mb-5 flex grow rounded-2 p-[10px]" placeholder="Enter the password..." value="">
+          </div>
+
+          <div class="terms cursor-pointer relative flex items-center gap-x-[10px] mb-[30px]">
+            <input type="checkbox" name="check" class="peer sr-only">
+            <span
+              class="w-[18px] h-[18px] inline-block border border-gray-400 rounded-sm peer-checked:bg-green-600 after:content-[✓] after:opacity-0 
+                peer-checked:after:opacity-100 after:text-white after:text-xs after:ml-[3px] after:mt-[1px] after:absolute after:pointer-events-none">
+            </span>
+            <p class="leading-none">I agree to the <a class="underline" href="#">terms & policy</a> </p>
+          </div>
+
+          <button
+            class=" w-[404px] text-base text-white font-bold rounded-lg p-1.5 bg-[#3A5B22] hover:bg-forestgreen hover:cursor-pointer"
+            type="submit">Sign
+            Up</button>
+
+          <div class="flex items-center my-6">
+            <hr class="flex-grow border-t border-gray-300">
+            <span class="mx-4 text-gray-700">or</span>
+            <hr class="flex-grow border-t border-gray-300">
+          </div>
+
+          <div class="buttons flex gap-x-[30px] mb-10 justify-between">
+            <div class="google rounded-lg border p-2">
+              <i class="fa-brands fa-google mr-1.5"></i>
+              <button class="" type="button">Sign in with Google</button>
+            </div>
+
+            <div class="apple rounded-lg border p-2">
+
+              <i class="fa-brands fa-apple w-4 h-4 mr-1.5"></i>
+              <button class="" type="button">Sigh in with Apple</button>
+            </div>
+          </div>
+
+          <div class="sign-in flex justify-center gap-x-[10px]">
+            <span class="text-base">Have an account?</span>
+            <a class="text-blue-900 font-medium" href="#">Sign in</a>
+          </div>
+
+        </form>
 
       </div>
+    </div>
+    <div class="rigth w-5xl h-full relative overflow-hidden">
+      <img class="absolute object-cover inset-0 w-full h-full" src="./images/chris-lee-70l1tDAI6rM-unsplash 1.svg">
+    </div>
   </div>
 
-  <div class="img">
-    <img src="./images/chris-lee-70l1tDAI6rM-unsplash 1.svg" alt="">
-  </div>
+  <script src="./js/app.js"></script>
 </body>
+
 </html>
